@@ -235,23 +235,36 @@ body {
   margin-bottom: 1rem;
   font-weight: bold;
 }
-.main-container .bottom-section div {
+.main-container .bottom-section .work-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.main-container .bottom-section .work-container .col {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #EEEEEE;
+}
+.main-container .bottom-section .work-container .yrs {
+  width: 10%;
+}
+.main-container .bottom-section .work-container .yrs p {
+  padding-left: 1rem;
+}
+.main-container .bottom-section .work-container .company {
+  width: 30%;
+}
+.main-container .bottom-section .work-container .title {
+  width: 40%;
+}
+.main-container .bottom-section .work-container .tech {
+  width: 20%;
+}
+.main-container .bottom-section .work-container p {
+  border-top: 1px solid #EEEEEE;
   padding: 1rem 0;
 }
-.main-container .bottom-section .top-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  font-weight: bold;
-  border-top: 1px solid #EEEEEE;
-}
-.main-container .bottom-section .work-details {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border-top: 1px solid #EEEEEE;
-}
-.main-container .bottom-section .work-details:nth-child(odd) {
+.main-container .bottom-section .work-container p:nth-child(even) {
   background-color: #EEEEEE;
 }
 .main-container footer {

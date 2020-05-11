@@ -204,26 +204,46 @@ html, body {
 			.bold();
 		}
 
-		div {
-			padding: 1rem 0;
-		}
-
-		.top-row {
+		.work-container {
 			.flex-row();
-			justify-content: space-around;
-			.bold();
-			border-top: 1px solid @background;
-		}
+			width: 100%;
 
-		.work-details {
-			.flex-row();
-			justify-content: space-around;
-			border-top: 1px solid @background;
+			.col {
+				.flex-column();
+				border-top: 1px solid @background;
+			}
 
-			&:nth-child(odd) {
-				background-color: @background;
+			.yrs {
+				width: 10%;
+
+				p {
+					padding-left: 1rem;
+				}
+			}
+
+			.company {
+				width: 30%;
+			}
+
+			.title {
+				width: 40%;
+			}
+
+			.tech {
+				width: 20%;
+			}
+
+			p {
+				border-top: 1px solid @background;
+				padding: 1rem 0;
+
+				&:nth-child(even) {
+					background-color: @background;
+				}
 			}
 		}
+
+		
 	}
 
 	footer {
