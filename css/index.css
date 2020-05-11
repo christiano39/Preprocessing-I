@@ -156,11 +156,23 @@ body {
 .main-container header nav {
   display: flex;
   flex-direction: row;
+  margin-top: 1rem;
 }
 .main-container header nav a {
   margin: 1rem;
   text-decoration: none;
   color: black;
+}
+@media (max-width: 500px) {
+  .main-container header nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .main-container header {
+    justify-content: center;
+  }
 }
 .main-container .top-section {
   background-color: #EEEEEE;
@@ -169,6 +181,9 @@ body {
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
+}
+.main-container .top-section img {
+  max-width: 100%;
 }
 .main-container .top-section .top-div {
   width: 90%;
@@ -202,8 +217,15 @@ body {
 .main-container .middle-section div {
   width: 47%;
 }
+@media (max-width: 500px) {
+  .main-container .middle-section div {
+    width: 98%;
+    margin: 1rem 0;
+  }
+}
 .main-container .middle-section .div1 h2 {
   font-size: 2.6rem;
+  padding-bottom: 1rem;
   font-weight: bold;
 }
 .main-container .middle-section .div1 p {
@@ -224,6 +246,12 @@ body {
 }
 .main-container .middle-section .div2 ul li:last-child {
   border-bottom: 1px solid black;
+}
+@media (max-width: 500px) {
+  .main-container .middle-section {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .main-container .bottom-section {
   margin: 3rem 0;
@@ -267,10 +295,19 @@ body {
 .main-container .bottom-section .work-container p:nth-child(even) {
   background-color: #EEEEEE;
 }
+.main-container .bottom-section .work-container p:first-child {
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  .main-container .bottom-section .work-container {
+    font-size: 0.8rem;
+  }
+}
 .main-container footer {
   background-color: #EEEEEE;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
+  font-size: 1.4rem;
 }
