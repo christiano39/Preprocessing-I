@@ -207,6 +207,8 @@ body {
   font-size: 1.6rem;
   padding: 1rem;
   margin: 1rem 0;
+  color: white;
+  background-color: #7a7a7a;
 }
 .main-container .middle-section {
   display: flex;
@@ -239,13 +241,13 @@ body {
   margin-top: 1rem;
 }
 .main-container .middle-section .div2 ul li {
-  border: 1px solid black;
+  border: 1px solid #7a7a7a;
   border-bottom: none;
   padding: 1rem;
   font-size: 1.4rem;
 }
 .main-container .middle-section .div2 ul li:last-child {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #7a7a7a;
 }
 @media (max-width: 500px) {
   .main-container .middle-section {
@@ -271,7 +273,7 @@ body {
 .main-container .bottom-section .work-container .col {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #EEEEEE;
+  border-top: 1px solid #7a7a7a;
 }
 .main-container .bottom-section .work-container .yrs {
   width: 10%;
@@ -289,7 +291,7 @@ body {
   width: 20%;
 }
 .main-container .bottom-section .work-container p {
-  border-top: 1px solid #EEEEEE;
+  border-top: 1px solid #7a7a7a;
   padding: 1rem 0;
 }
 .main-container .bottom-section .work-container p:nth-child(even) {
@@ -310,4 +312,6 @@ body {
   align-items: center;
   padding: 2rem 0;
   font-size: 1.4rem;
+  color: white;
+  background-color: #7a7a7a;
 }
