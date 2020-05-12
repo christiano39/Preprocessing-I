@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -20,9 +22,10 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
+	//.testing-border();
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -54,6 +57,236 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+}
+
+// variables
+@text-color: black;
+@secondary-text-color: white;
+@background: #EEEEEE;
+@secondary-background-color: rgb(122, 122, 122);
+@main-font: 'Roboto', sans-serif;
+
+//mixins
+.testing-border() {
+	border: 1px solid red;
+}
+
+.center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-row() {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column() {
+	display: flex;
+	flex-direction: column;
+}
+
+.bold() {
+	font-weight: bold;
+}
+
+//main-container
+.main-container {
+	width: 90%;
+	margin: 0 auto;
+	color: @text-color;
+	font-size: 1.6rem;
+	font-family: @main-font;
+
+	header {
+		.flex-row();
+		justify-content: flex-end;
+
+		nav {
+			.flex-row();
+			margin-top: 1rem;
+
+			a {
+				margin: 1rem;
+				text-decoration: none;
+				color: @text-color;
+			}
+
+			@media (max-width: 500px) {
+				.flex-column();
+			}
+		}
+
+		@media (max-width: 500px) {
+			justify-content: center;
+		}
+	}
+
+	.top-section {
+		background-color: @background;
+		.center();
+		.flex-column();
+		margin: 1rem 0;
+
+		img {
+			max-width: 100%;
+		}
+
+		.top-div {
+			width: 90%;
+			padding: 2rem 0;
+			border-bottom: 1px solid black;
+			
+			h1 {
+				font-size: 3.6rem;
+			}
+
+			h2 {
+				padding-top: 1rem;
+			}
+		}
+
+		.bottom-div {
+			width: 90%;
+			padding: 1rem 0;
+
+			p {
+				font-size: 1.4rem;
+			}
+
+			button {
+				font-size: 1.6rem;
+				padding: 1rem;
+				margin: 1rem 0;
+				color: @secondary-text-color;
+				background-color: @secondary-background-color;
+			}
+		}
+	}
+
+	.middle-section {
+		.flex-row();
+		justify-content: space-between;
+		margin: 2rem 0;
+
+		div {
+			width: 47%;
+
+			@media (max-width: 500px) {
+				width: 98%;
+				margin: 1rem 0;
+			}
+		}
+
+		.div1 {
+			h2 {
+				font-size: 2.6rem;
+				padding-bottom: 1rem;
+				.bold();
+			}
+
+			p{
+				font-size: 1.4rem;
+			}
+		}
+
+		.div2 {
+			h3 {
+				font-size: 2rem;
+				.bold();
+			}
+
+			ul {
+				margin-top: 1rem;
+
+				li {
+					border: 1px solid @secondary-background-color;
+					border-bottom: none;
+					padding: 1rem;
+					font-size: 1.4rem;
+
+					&:last-child {
+						border-bottom: 1px solid @secondary-background-color;
+					}
+				}
+
+			}
+		}
+
+		@media (max-width: 500px) {
+			.flex-column();
+		}
+	}
+
+	.bottom-section {
+		margin: 3rem 0;
+		.flex-column();
+
+		h2 {
+			font-size: 2.2rem;
+			margin-bottom: 1rem;
+			.bold();
+		}
+
+		.work-container {
+			.flex-row();
+			width: 100%;
+
+			.col {
+				.flex-column();
+				border-top: 1px solid @secondary-background-color;
+			}
+
+			.yrs {
+				width: 10%;
+
+				p {
+					padding-left: 1rem;
+				}
+			}
+
+			.company {
+				width: 30%;
+			}
+
+			.title {
+				width: 40%;
+			}
+
+			.tech {
+				width: 20%;
+			}
+
+			p {
+				border-top: 1px solid @secondary-background-color;
+				padding: 1rem 0;
+
+				&:nth-child(even) {
+					background-color: @background;
+				}
+
+				&:first-child {
+					.bold();
+				}
+			}
+
+			@media (max-width: 500px) {
+				font-size: 0.8rem;
+			}
+		}
+
+		
+	}
+
+	footer {
+		background-color: @background;
+		.center();
+		padding: 2rem 0;
+		font-size: 1.4rem;
+		color: @secondary-text-color;
+		background-color: @secondary-background-color;
+	}
 }
 
